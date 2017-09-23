@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
+    <html lang="eng">
     <title>Offline Web Applications - Dive Into HTML5</title>
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 
 <body style="font-family: 'Lora', serif;">
@@ -59,7 +59,7 @@
 
         <p style="font-size: large;margin: 1.5em 0;">
             An offline web application revolves around a cache manifest file. What’s a manifest file? It’s a list of all of the resources that your web application might need to access while it’s disconnected from the network. In order to bootstrap the process of downloading and caching these resources, you need to point to the manifest file, using a manifest attribute on your
-            <html> element.
+            html element.
         </p>
         <code style="padding-left: 2em">
             &lt;!DOCTYPE html&gt;
@@ -112,8 +112,7 @@
         <h2 style="font-family: 'Gloria Hallelujah', cursive; margin: 1em;font-size: 2.5em;text-transform:uppercase;text-align:center;text-shadow: 0 0 1px #667;">NETWORK SECTIONS</h2>
 
         <p style="font-size: large;margin: 1.5em 0;">Here is a slightly more complicated example. Suppose you want your clock application to track visitors, using a tracking.cgi script that is loaded dynamically from an <img src> attribute. Caching this resource would defeat the purpose of tracking, so this resource should never be cached and never be available offline. Here is how you do that:</p>
-    
-       <pre><code>CACHE MANIFEST
+    <pre><code>CACHE MANIFEST
        <mark>NETWORK:
        /tracking.cgi</mark>
        CACHE:
@@ -155,7 +154,7 @@
 
 
 
-            <p style="font-size: large;margin: 1.5em 0;">First, let&rsquo;s talk about the flow of events. Specifically, <abbr>DOM</abbr> events. When your browser visits a page that points to a cache manifest, it fires off a series of events on the <code>window.applicationCache</code> object. I know this looks complicated, but trust me, this is the simplest version I could come up with that didn't leave out important information.</p>
+            <p style="font-size: large;margin: 1.5em 0;">First, let's talk about the flow of events. Specifically, <abbr>DOM</abbr> events. When your browser visits a page that points to a cache manifest, it fires off a series of events on the <code>window.applicationCache</code> object. I know this looks complicated, but trust me, this is the simplest version I could come up with that didn't leave out important information.</p>
 
             <ol style="font-size: large;margin: 1.5em 0;">
         <li>As soon as it notices a <code>manifest</code> attribute on the <code>&lt;html&gt;</code> element, your browser fires a <strong><code>checking</code></strong> event. (All the events listed here are fired on the <code>window.applicationCache</code> object.) The <code>checking</code> event is always fired, regardless of whether you have previously visited this page or any other page that points to the same cache manifest.
@@ -234,7 +233,7 @@ clock.css</code></pre>
 halma.html
 ../halma-localstorage.js</code></pre>
 
-<p style="font-size: large;margin: 1.5em 0;">A word about paths. I've created an <code>offline/</code> subdirectory in the <code>examples/</code> directory, and this cache manifest file lives inside the subdirectory. Because the <abbr>HTML</abbr> page will need one minor addition to work offline (more on that in a minute), I've created a separate copy of the <abbr>HTML</abbr> file, which also lives in the <code>offline/</code> subdirectory. But because there are no changes to the JavaScript code itself since <a href="storage.html#halma" style="color: FireBrick;border-bottom: 1px dotted;text-decoration: none">we added local storage support</a>, I&rsquo;m literally reusing the same <code>.js</code> file, which lives in the parent directory (<code>examples/</code>). Altogether, the files look like this:</p>
+<p style="font-size: large;margin: 1.5em 0;">A word about paths. I've created an <code>offline/</code> subdirectory in the <code>examples/</code> directory, and this cache manifest file lives inside the subdirectory. Because the <abbr>HTML</abbr> page will need one minor addition to work offline (more on that in a minute), I've created a separate copy of the <abbr>HTML</abbr> file, which also lives in the <code>offline/</code> subdirectory. But because there are no changes to the JavaScript code itself since <a href="storage.html#halma" style="color: FireBrick;border-bottom: 1px dotted;text-decoration: none">we added local storage support</a>, I'm literally reusing the same <code>.js</code> file, which lives in the parent directory (<code>examples/</code>). Altogether, the files look like this:</p>
 
 <pre><samp>/examples/localstorage-halma.html
 /examples/halma-localstorage.js
@@ -292,7 +291,7 @@ halma.html
                 style="color: FireBrick;border-bottom: 1px dotted;text-decoration: none">buy &ldquo;HTML5: Up &amp; Running&rdquo; with this affiliate link</a> or <a href="http://oreilly.com/catalog/9780596806033"style="color: FireBrick;border-bottom: 1px dotted;text-decoration: none">buy an electronic edition directly from O'Reilly</a>. You'll get a book, and I'll get a buck. I do not currently accept direct donations.</p>
             </div>
         </div>
-
-<p style="font-size: large;margin: 1.5em 0;">Copyright MMIX&ndash;MMXI <a href="about.html" style="color: FireBrick;border-bottom: 1px dotted;text-decoration: none">Mark Pilgrim</a>
+        
+<p style="font-size: medium;line-height: 1.75;margin: 1.75em 0; text-align: center;">Copyright MMIX–MMXI <a href="#" style="color: FireBrick;border-bottom: 1px dotted;text-decoration: none">Mark Pilgrim</a></p>
 </body>
 </html>
